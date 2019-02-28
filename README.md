@@ -44,5 +44,5 @@ El alcance de este proyecto tiene como fin la realización de una plataforma web
 * Julián David Sánchez López
 * Sergio Muñoz Rincón
 * Deivid Sebastián Bareño León
-# Nombre del proyecto
+
 
