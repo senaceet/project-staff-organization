@@ -2,15 +2,15 @@ create database staff_organization;
 use staff_organization;
 
 create table tipo_documento(
-id_tipo_documento int  not null,
-abreviacion varchar (10) not null,
-nombre_documento varchar (20) not null,
+id_tipo_documento smallint not null,
+abreviacion varchar (5) not null,
+nombre_documento varchar (30) not null,
 primary key (id_tipo_documento)
 );
 
 create table rol(
-id_rol int not null,
-nombre_rol varchar (20),
+id_rol int  not null,
+nombre_rol varchar (30),
 primary key (id_rol)
 );
 
@@ -24,11 +24,10 @@ primary key (id_tipo_donacion)
 create table donacion(
 id_donacion int not null,
 valor_donacion int not null,
-fecha_donacion date not null,
-hora_donacion time not null,
+fecha_donacion datetime not null,
 id_tipo_donacion int not null,
-id_numero_documento int not null,
-id_tipo_documento int not null
+id_numero_documento bigint not null,
+id_tipo_documento smallint not null
 );
 
 create table sede(
@@ -36,7 +35,7 @@ id_sede int not null,
 nombre_sede varchar (45) not null,
 direccion varchar (25) not null,
 propietario varchar (10) not null,
-telefono bigint (20) not null,
+telefono bigint  not null,
 primary key (id_sede)
 );
 
@@ -59,26 +58,23 @@ primary key (id_reunion)
 
 create table horarios(
 id_horarios int not null,
-duracion time not null,
-hora time not null,
-fecha date not null,
+fecha datetime not null,
 id_reunion int not null,
 primary key (id_horarios)
 );
 
 create table usuario(
-id_numero_documento int not null,
+id_numero_documento bigint not null,
 primer_nombre varchar(25) not null,
 segundo_nombre  varchar(25) not null,
 primer_apellido varchar (25) not null,
 segundo_apellido varchar(25) not null,
-telefono bigint (20) not null,
-email varchar(25) not null unique,
-contraseña varchar(30) not null,
-fecha_nacimiento date not null,
+telefono bigint  not null,
+email varchar(50) not null unique,
+contraseña varchar(50) not null,
+fecha_nacimiento datetime not null,
 estado_civil varchar(25) not null,
-nombre_sede varchar(25) not null,
-id_tipo_documento int not null,
+id_tipo_documento smallint not null,
 id_sede int not null,
 id_rol int not null
 );
