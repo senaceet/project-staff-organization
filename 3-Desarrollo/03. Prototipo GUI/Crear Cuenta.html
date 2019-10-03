@@ -6,8 +6,7 @@
     <link rel="shortcut icon" href="https://i.ibb.co/mN1PDBW/LOGO.jpg(16 kB)
 https://i.ibb.co/mN1PDBW/LOGO.png
 ">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://puntodefugabogota.files.wordpress.com/2017/08/fondo-negro1.jpg(18 kB)">
     <img src="https://i.ibb.co/LkHY3Sc/LOGO-JPG.png" height=" 150" width="200">
 
@@ -26,38 +25,37 @@ https://i.ibb.co/mN1PDBW/LOGO.png
 <body background="https://www.solidariaradio.com/wp-content/uploads/2018/07/xxxxx.jpg"></body>
 <style type="text/css">
     body {
-
         font-family: 'Roboto', sans-serif;
     }
-
+    
     .form-control {
         height: 40px;
         box-shadow: none;
         color: #969fa4;
     }
-
+    
     .form-control:focus {
         border-color: #ff0000;
     }
-
+    
     .form-control,
     .btn {
         border-radius: 30px;
     }
-
+    
     .signup-form {
         width: 650px;
         margin: 0 auto;
         padding: 30px 0;
     }
-
+    
     .signup-form h2 {
         color: #ff0101;
         margin: 0 0 15px;
         position: relative;
         text-align: center;
     }
-
+    
     .signup-form h2:before,
     .signup-form h2:after {
         content: "";
@@ -67,21 +65,21 @@ https://i.ibb.co/mN1PDBW/LOGO.png
         top: 50%;
         z-index: 2;
     }
-
+    
     .signup-form h2:before {
         left: 0;
     }
-
+    
     .signup-form h2:after {
         right: 0;
     }
-
+    
     .signup-form .hint-text {
         color: #999;
         margin-bottom: 30px;
         text-align: center;
     }
-
+    
     .signup-form form {
         color: #999;
         border-radius: 3px;
@@ -90,46 +88,46 @@ https://i.ibb.co/mN1PDBW/LOGO.png
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
         padding: 30px;
     }
-
+    
     .signup-form .form-group {
         margin-bottom: 20px;
     }
-
+    
     .signup-form input[type="checkbox"] {
         margin-top: 3px;
     }
-
+    
     .signup-form .btn {
         font-size: 16px;
         font-weight: bold;
         min-width: 140px;
         outline: none !important;
     }
-
+    
     .signup-form .row div:first-child {
         padding-right: 10px;
     }
-
+    
     .signup-form .row div:last-child {
         padding-left: 10px;
     }
-
+    
     .signup-form a {
-        color: rgb(255, 0, 0);
+        color: #999;
         text-decoration: underline;
     }
-
+    
     .signup-form a:hover {
         text-decoration: none;
     }
-
+    
     .signup-form form a {
-        color: #ff0000;
+        color: #999;
         text-decoration: none;
     }
-
+    
     .signup-form form a:hover {
-        text-decoration: red;
+        text-decoration: #999;
     }
 </style>
 
@@ -137,55 +135,48 @@ https://i.ibb.co/mN1PDBW/LOGO.png
     <div class="signup-form">
         <form action="/examples/actions/confirmation.php" method="post">
             <center>
-                <font size=8 style="color:rgb(247, 10, 10)" ;> <strong>Crear Cuenta</strong></font>
+                <font size=8 style="color:steelblue" ;> <strong>Crear Cuenta</strong></font>
             </center>
             <br>
 
             <div class="form-group">
                 <div class="row">
-                    <div class="col-xs-6"><input type="text" class="form-control" name="Nombres" placeholder="Nombres"
-                            required="required"></div>
-                    <div class="col-xs-6"><input type="text" class="form-control" name="Apellidos"
-                            placeholder="Apellidos" required="required"></div>
+                    <div class="col-xs-6"><input type="text" class="form-control" name="Nombres" placeholder="Nombres" required="required"></div>
+                    <div class="col-xs-6"><input type="text" class="form-control" name="Apellidos" placeholder="Apellidos" required="required"></div>
                 </div>
             </div>
             <center>
                 <div class="dropdown">
                     <div align="left">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-globe" aria-hidden="true"></i> Tipo de documento
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="trigger-btn" aria-hidden="true"></i> Tipo de documento
                         </button>
-                    <br>
-                    <br>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Cedula de ciudadania</a>
-                        <a class="dropdown-item" href="#">Tarjeta de identidad</a>
-                        <a class="dropdown-item" href="#">Cedula de extranjeria</a>
-                        <a class="dropdown-item" href="#">Pasaporte</a>
+                        <br>
+                        <br>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Cedula de ciudadania</a>
+                            <a class="dropdown-item" href="#">Tarjeta de identidad</a>
+                            <a class="dropdown-item" href="#">Cedula de extranjeria</a>
+                            <a class="dropdown-item" href="#">Pasaporte</a>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-xs-6"><input type="text" class="form-control" name="Numero de Documento"
-                                placeholder="Numero de Documento" required="required"></div>
-                        <div class="col-xs-6"><input type="text" class="form-control" name="Telefono"
-                                placeholder="Telefono" required="required"></div>
+                        <div class="col-xs-6"><input type="text" class="form-control" name="Numero de Documento" placeholder="Numero de Documento" required="required"></div>
+                        <div class="col-xs-6"><input type="text" class="form-control" name="Telefono" placeholder="Telefono" required="required"></div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="Contraseña" placeholder="Contraseña"
-                        required="required">
+                    <input type="password" class="form-control" name="Contraseña" placeholder="Contraseña" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="Confirmar Contraseña"
-                        placeholder="Confirmar Contraseña" required="required">
+                    <input type="password" class="form-control" name="Confirmar Contraseña" placeholder="Confirmar Contraseña" required="required">
                 </div>
 
                 <center>
                     <div class="form-check form-check-inline">
-                        <label class="form-check-label" for="inlineRadio1" style="color:rgb(184, 22, 22)" ;> Fecha de
+                        <label class="trigger-btn" data-toggle="modal" for="inlineRadio1" style="color:steelblue" ;> Fecha de
                             Nacimineto</label>
                     </div>
                     <br>
@@ -194,42 +185,37 @@ https://i.ibb.co/mN1PDBW/LOGO.png
                     </div>
                 </center>
                 <div class="form-check form-check-inline">
-                    <label class="form-check-label" for="inlineRadio1" style="color:rgb(184, 22, 22)" ;>Genero:</label>
+                    <label class="trigger-btn" for="inlineRadio1" style="color:steelblue" ;>Genero:</label>
                 </div>
                 <br>
                 <br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                        value="option1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                     <label class="form-check-label" for="inlineRadio1">Hombre</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                     <label class="form-check-label" for="inlineRadio2"> Mujer</label>
                 </div>
                 <br>
                 <hr>
                 <div class="form-check form-check-inline">
-                    <label class="form-check-label" for="inlineRadio1" style="color:rgb(184, 22, 22)" ;>Elegir
+                    <label class="form-check-label" for="inlineRadio1" style="color:steelblue" ;>Elegir
                         Rol:</label>
                 </div>
                 <br>
                 <br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                        value="option1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                     <label class="form-check-label" for="inlineRadio1">Priviliged Account</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                     <label class="form-check-label" for="inlineRadio2"> Work Account</label>
                 </div>
                 <br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                     <label class="form-check-label" for="inlineRadio2"> Sight Account</label>
                 </div>
                 <br>
@@ -237,7 +223,7 @@ https://i.ibb.co/mN1PDBW/LOGO.png
                 <hr>
                 <center>
                     <div class="form-group">
-                        <a href="StaffOrganization.html" class="btn btn-success btn-lg btn-danger">Continuar</button></a>
+                        <a href="StaffOrganization.html" class="btn btn-primary btn-block">Continuar</button></a>
                     </div>
                 </center>
 </body>
