@@ -17,22 +17,19 @@ primary key (id_rol)
 create table tipo_donacion(
 id_tipo_donacion int not null,
 nombre_donacion varchar (20) not null,
-id_donacion varchar (10)  not null,
 primary key (id_tipo_donacion)
 );
 
 create table donacion(
-id_donacion int not null,
 valor_donacion int not null,
 fecha_donacion datetime not null,
 id_tipo_donacion int not null,
-id_numero_documento bigint not null,
+id_numero_documento varchar(30) not null,
 id_tipo_documento smallint not null
 );
 
 create table sede(
 id_sede int not null,
-nombre_sede varchar (45) not null,
 direccion varchar (25) not null,
 propietario varchar (10) not null,
 telefono bigint  not null,
@@ -44,7 +41,6 @@ id_mantenimiento_sede int not null,
 nombre_mantenimiento varchar(55) not null,
 costo int not null,
 descripcion varchar(55) not null,
-nombre_sede varchar (25) not null,
 id_sede int not null,
 primary key (id_mantenimiento_sede)
 );
@@ -64,14 +60,14 @@ primary key (id_horarios)
 );
 
 create table usuario(
-id_numero_documento bigint not null,
+id_numero_documento varchar(30) not null,
 primer_nombre varchar(25) not null,
-segundo_nombre  varchar(25) not null,
+segundo_nombre  varchar(25),
 primer_apellido varchar (25) not null,
-segundo_apellido varchar(25) not null,
+segundo_apellido varchar(25),
 telefono bigint  not null,
 email varchar(50) not null unique,
-contraseña varchar(50) not null,
+contraseÃ±a varchar(50) not null,
 fecha_nacimiento datetime not null,
 estado_civil varchar(25) not null,
 id_tipo_documento smallint not null,
@@ -102,7 +98,7 @@ alter table usuario add primary key (id_tipo_documento, id_numero_documento);
 -- Usuario/donacion--
 alter table donacion add constraint fk_donacion_usuario foreign key (id_tipo_documento, id_numero_documento) references usuario(id_tipo_documento, id_numero_documento) on update cascade;
 alter table donacion add constraint fk_donacion_tipo_donacion foreign key (id_tipo_donacion) references tipo_donacion(id_tipo_donacion) on update cascade;
-alter table donacion add primary key (id_tipo_donacion, id_donacion);
+alter table donacion add primary key (id_tipo_donacion);
 
 -- Usuario/reunion --
 alter table reunion add constraint fk_sede_reunion foreign key (id_sede) references sede(id_sede) on update cascade;
@@ -114,5 +110,3 @@ alter table horarios add constraint fk_horario_reunion foreign key (id_reunion) 
 
 -- Usuario/mantenimiento_sede --
 alter table mantenimiento_sede add constraint fk_mantenimiento_sede_sede foreign key (id_sede) references sede(id_sede) on update cascade;
-
-
